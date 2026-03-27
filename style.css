@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color:rgb(18, 22, 22);
+    color: #fff;
+}
+header nav{
+    background-color: #a7d8de;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:black;
+}
+header nav form{
+    display: flex;
+    justify-content: center;
+}
+.searchBar{
+    padding: 10px;
+}
+#searchBtn{
+    padding: 10px;
+    background-color: black;
+    color:#fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#searchBtn:hover , .recipe button:hover{
+    background-color: rgb(32, 28, 28);
+}
+.main-heading{
+    font-size: 2.4rem;
+    text-align: center;
+}
+.recipe-container{
+    margin-top: 30px;
+    text-align: center; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 40px;
+    width:80%;
+    margin: 10px auto;
+}
+.recipe{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  color:#000;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(78,73,73,0.1), -5px -5px 10px rgba(34,34,34,0.5);
+  cursor: pointer;
+  max-width: 350px;
+}
+
+.recipe button{
+    font-size:20px;
+    font-weight: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 18px auto;
+    background-color: black;
+    color:#fff;
+}
+
+/* pop up styling */
+.recipe-details-container{
+    display: none;
+    position: fixed;
+    top:50%;
+    left:45%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    background-color: brown;
+    border-radius: 12px;
+    width:40%;
+    height: 60%;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;
+}
+.recipe-details-content{
+    padding: 30px;
+
+}
+.recipe-name{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.ingrdientList{
+    margin-bottom: 10px;
+    margin-left: ;
+}
+.recipeInstructions p{
+    line-height: 30px ;
+    white-space: pre-line;
+}
+.recipe-close-btn{
+    position: fixed;
+    right:20px;
+    top:20px;
+    width:30px;
+    height:30px;
+    background-color: #fff;
+}
+/*responsive styling*/
+@media screen and (max-width:600px) {
+    header nav{
+        flex-direction: column;
+    }
+    header nav form{
+        width: 80%;
+        margin-top: 20px;
+    }
+    .main-heading{
+        font-size: 2rem;
+    }
+}
